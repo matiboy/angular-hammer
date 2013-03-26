@@ -38,7 +38,6 @@ angular.forEach({
 	ngzTransform: "transform",
 	ngzTransformstart: "transformstart",
 	ngzTransformend: "transformend",
-	ngzRotate: "rotate",
 	ngzPinch: "pinch",
 	ngzPinchout: "pinchout",
 	ngzPinchin: "pinchin",
