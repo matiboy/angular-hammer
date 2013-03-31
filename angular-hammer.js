@@ -6,43 +6,43 @@
 
 /**
  * @ngdoc overview
- * @name ngzTouch
+ * @name ahTouch
  * @description
  */
 
 /**
  * @ngdoc object
- * @name ngzTouch
+ * @name ahTouch
  * @requires hammerjs
  *
  */
-var module = angular.module('ngzTouch', ['ng']);
+var module = angular.module('ahTouch', ['ng']);
 
 angular.forEach({
-	ngzTap: "tap",
-	ngzSwipe: "swipe",
-	ngzSwipeleft: "swipeleft",
-	ngzSwiperight: "swiperight",
-	ngzDoubletap: "doubletap",
-	ngzSwipeup: "swipeup",
-	ngzSwipedown: "swipedown",
-	ngzHold: "hold",
-	ngzRotate: "rotate",
-	ngzDrag: "drag",
-	ngzDragstart: "dragstart",
-	ngzDragend: "dragend",
-	ngzDragup: "dragup",
-	ngzDragdown: "dragdown",
-	ngzDragleft: "dragleft",
-	ngzDragright: "dragright",
-	ngzTransform: "transform",
-	ngzTransformstart: "transformstart",
-	ngzTransformend: "transformend",
-	ngzPinch: "pinch",
-	ngzPinchout: "pinchout",
-	ngzPinchin: "pinchin",
-	ngzTouch: "touch",
-	ngzRelease: "release"
+	ahTap: "tap",
+	ahSwipe: "swipe",
+	ahSwipeleft: "swipeleft",
+	ahSwiperight: "swiperight",
+	ahDoubletap: "doubletap",
+	ahSwipeup: "swipeup",
+	ahSwipedown: "swipedown",
+	ahHold: "hold",
+	ahRotate: "rotate",
+	ahDrag: "drag",
+	ahDragstart: "dragstart",
+	ahDragend: "dragend",
+	ahDragup: "dragup",
+	ahDragdown: "dragdown",
+	ahDragleft: "dragleft",
+	ahDragright: "dragright",
+	ahTransform: "transform",
+	ahTransformstart: "transformstart",
+	ahTransformend: "transformend",
+	ahPinch: "pinch",
+	ahPinchout: "pinchout",
+	ahPinchin: "pinchin",
+	ahTouch: "touch",
+	ahRelease: "release"
 	}, function (value, key) {
 		module.directive( key, function() {
 			return function (scope, element, attrs) {
