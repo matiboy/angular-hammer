@@ -16,7 +16,7 @@
  * @requires hammerjs
  *
  */
-var module = angular.module('ahTouch', ['ng']);
+var ahTouchModule = angular.module('ahTouch', ['ng']);
 
 angular.forEach({
 	ahTap: "tap",
@@ -44,7 +44,7 @@ angular.forEach({
 	ahTouch: "touch",
 	ahRelease: "release"
 	}, function (value, key) {
-		module.directive( key, function() {
+		ahTouchModule.directive( key, function() {
 			return function (scope, element, attrs) {
 				var optionsKey = key + "Options";
 				attrs[optionsKey] = attrs[optionsKey] || {};
