@@ -49,14 +49,21 @@ angular.forEach({
 				var optionsKey = key + "Options";
 				attrs[optionsKey] = attrs[optionsKey] || {};
 				// TODO: Options
-				return Hammer(element[0],scope.$eval(attrs[optionsKey]))
-					.on( value, function (event) {
+				var hammer = Hammer(element[0],scope.$eval(attrs[optionsKey]));
+				var fn = function (event) {
 						// Differentiate between callbacks and other expressions
 						var applied = scope.$apply( attrs[key] );
 						if(typeof(applied) == "function"){
 							return angular.bind( scope, scope.$apply( attrs[key] ), event )();
 						}
-					});
+					}
+				hammer.on( value, fn);
+				
+				// Taken from https://github.com/monospaced/angular-hammer/blob/master/angular-hammer.js
+				// unbind Hammer touch event
+				scope.$on('$destroy', function(){
+				  hammer.off(value, fn);
+				});
 			}
 		});
 	});
